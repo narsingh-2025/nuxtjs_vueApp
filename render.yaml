@@ -1,0 +1,12 @@
+services:
+  # ── Nuxt 3 Static Site (pixelforge frontend) ──────────────────────────────
+  - type: static
+    name: pixelforge-frontend
+    rootDir: nuxtApp
+    buildCommand: npm install && npm run generate
+    staticPublishPath: .output/public
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NUXT_TELEMETRY_DISABLED
+        value: "1"
